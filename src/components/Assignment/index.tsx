@@ -14,10 +14,10 @@ export function Assignment({
   setAssignmentList,
   assignmentList,
 }: Props) {
-  function handleDeleteAssignment(assignmentToBeDeleted: number) {
+  function handleDeleteAssignment(id: number) {
     setAssignmentList(
       assignmentList.filter((assignment) => {
-        return assignment.id != assignmentToBeDeleted;
+        return assignment.id != id;
       })
     );
   }
