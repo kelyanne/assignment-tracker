@@ -22,7 +22,6 @@ export function Assignment({
     );
   }
 
-  // question: why create a copy of list/objects in react? when this is necessary?
   const handleComplete = (id: number) => {
     setAssignmentList((prevAssignments) =>
       prevAssignments.map((assignment) =>
@@ -37,7 +36,6 @@ export function Assignment({
     <div className={styles.assignment}>
       <button
         className={styles.checkContainer}
-        // why I need to put the function inside another function
         onClick={() => handleComplete(assignment.id)}
       >
         {assignment.completed ? <BsCheckCircleFill /> : <div />}

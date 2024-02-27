@@ -11,15 +11,15 @@ interface Props {
 
 export function Header({ setAssignmentList }: Props) {
   const [assignment, setAssignment] = useState<string>("");
-  const [id, setId] = useState<number>(0);
+  const [id, setId] = useState<number>(1);
 
   const disabled = assignment === "" ? true : false;
 
   function addAssignment(event: FormEvent<HTMLButtonElement>) {
-    setId((count) => count + 1);
+    setId((id) => id + 1);
     event.preventDefault();
     const newAssignment = {
-      id: id + 1,
+      id: id,
       title: assignment,
       completed: false,
     };
